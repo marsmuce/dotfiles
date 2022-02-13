@@ -1,0 +1,3 @@
+#!/bin/zsh
+exa --color=auto --icons --group-directories-first -alhTF --level=2 $@|\
+  bat --color=auto --decorations=auto --wrap=never
