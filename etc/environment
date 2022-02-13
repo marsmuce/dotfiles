@@ -1,0 +1,19 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+
+# Set the locale
+LANG=en_US.UTF-8
+TZ=America/New_York
+
+# Set the default shell
+SHELL=/bin/zsh
+
+# Set the default editor
+EDITOR=nvim
+VISUAL=nvim
+
+# Set the default web browser
+BROWSER=firefox
