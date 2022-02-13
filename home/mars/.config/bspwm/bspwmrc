@@ -1,0 +1,42 @@
+#!/bin/zsh
+
+### AUTOSTART
+export DESKTOP_SESSION=bspwm
+killall sxhkd; sxhkd -c $HOME/.config/bspwm/sxhkdrc &
+
+### SETTINGS
+
+## Global Settings
+
+# Color of the border of an unfocused window.
+bspc config normal_border_color "#302D41"
+# Color of the border of a focused window of an unfocused monitor.
+bspc config active_border_color "#96CDFB"
+# Color of the border of a focused window of a focused monitor.
+bspc config focused_border_color "#96CDFB"
+
+# Default split ratio.
+bspc config split_ratio 0.55
+
+# Focus the window under the pointer.
+bspc config focus_follows_pointer true
+# When focusing a window, put the pointer at its center.
+bspc config pointer_follows_focus false
+# When focusing a monitor, put the pointer at its center.
+bspc config pointer_follows_monitor false
+
+
+## Monitor and Desktop Settings
+
+# Set monitor and workspaces (must do this for every monitor).
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+## Desktop Settings
+
+# Size of the gap that separates windows.
+bspc config window_gap 8
+
+## Node Settings
+
+# Window border width.
+bspc config border_width 2 

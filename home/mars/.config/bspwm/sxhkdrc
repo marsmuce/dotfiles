@@ -1,0 +1,107 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	st
+
+# program launcher
+super + shift + Return
+	rofi -show drun
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+# close and kill
+super + {_,shift + }w
+	bspc node -{c,k}
+
+# send the newest marked node to the newest preselected node
+super + y
+	bspc node newest.marked.local -n newest.!automatic.local
+
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+#
+# state/flags
+#
+
+# set the window state to tiled
+super + t
+  bspc node -t \~tiled
+
+# set the window state to floating
+super + s
+  bspc node -t \~floating
+
+# set the window state to fullscreen
+super + f 
+  bspc node -t \~fullscreen
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the node for the given path jump
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous window in the current desktop
+super + {_,shift + }c
+	bspc node -f {next,prev}.local.!hidden.window
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+# mouse buttons
+#
+
+# on mouse button 8 go back
+button8
+	xvkbd -sendevent -text "\[XF86Back]"
+
+# on mouse button 9 go forward
+button9
+	xvkbd -sendevent -text "\[XF86Forward]"
+
+#
+# media keys
+#
+
+# mute the audio
+XF86AudioMute
+  pamixer-notify -t
+
+# lower the audio volume
+XF86AudioLowerVolume
+  pamixer-notify -d 5
+
+# raise the audio volume
+XF86AudioRaiseVolume
+  pamixer-notify -i 5
