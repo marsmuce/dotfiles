@@ -2,7 +2,7 @@
 
 ### AUTOSTART
 export DESKTOP_SESSION=bspwm
-killall sxhkd; sxhkd -c $HOME/.config/bspwm/sxhkdrc &
+pgrep -x sxhkd > /dev/null || sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 
 ### SETTINGS
 

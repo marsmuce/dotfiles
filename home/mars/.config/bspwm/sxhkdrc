@@ -8,8 +8,8 @@ super + space
 
 # restart bspwm and make sxhkd reload its configuration files
 ctrl + alt + Delete
-	bspc wm -r; pkill -USR1 -x sxhkd
-
+  bspc wm -r; pkill -USR1 -x sxhkd
+  
 # close and kill
 super + {w,q}
   bspc node -{c,k}
