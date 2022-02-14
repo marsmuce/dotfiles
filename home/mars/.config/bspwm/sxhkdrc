@@ -10,10 +10,6 @@ super + space
 ctrl + alt + Delete
 	bspc wm -r; pkill -USR1 -x sxhkd
 
-# quit/restart bswm
-super + alt + {q,r}
-	bspc {quit,wm -r}
-
 # close and kill
 super + {w,q}
   bspc node -{c,k}
