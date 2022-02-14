@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + shift + Return
-	rofi -show drun
+	dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -38,17 +38,9 @@ super + g
 # state/flags
 #
 
-# set the window state to tiled
-super + t
-  bspc node -t \~tiled
-
-# set the window state to floating
-super + s
-  bspc node -t \~floating
-
-# set the window state to fullscreen
-super + f 
-  bspc node -t \~fullscreen
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t \~{tiled,pseudo_tiled,floating,fullscreen}
 
 #
 # focus/swap
