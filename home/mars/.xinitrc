@@ -34,6 +34,7 @@ fi
 
 exec xsetroot -cursor_name left_ptr &
 exec hsetroot -cover $HOME/Pictures/Wallpapers/Horsehead.jpg &
+exec lxpolkit &
 exec dunst &
 exec redshift &
 exec bspwm
