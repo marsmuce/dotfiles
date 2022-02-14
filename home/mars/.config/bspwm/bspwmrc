@@ -20,10 +20,6 @@ bspc config split_ratio 0.55
 
 # Focus the window under the pointer.
 bspc config focus_follows_pointer true
-# When focusing a window, put the pointer at its center.
-bspc config pointer_follows_focus false
-# When focusing a monitor, put the pointer at its center.
-bspc config pointer_follows_monitor false
 
 
 ## Monitor and Desktop Settings
