@@ -30,6 +30,7 @@ alias rm='rm -i' # interractive
 alias mv='mv -i' # interractive
 alias cp='cp -i' # interractive
 alias dots='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=/'
+alias orphans='pacman -Qtdq | sudo pacman -Rns -'
 
 # Prompts
 PROMPT='%B%F{red}%n%f in %F{blue}%~%f > %b'
