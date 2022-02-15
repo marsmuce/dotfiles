@@ -1,17 +1,23 @@
-@charset "UTF-8"; 
+/**
+ * Font config
+ */
 
-:root {
+:root { 
   --font-primary: sans-serif;
   --font-display: sans-serif;
   --font-code: monospace;
   --font-headline: sans-serif;
+  --font-korean: sans-serif;
+  --font-japanese: sans-serif;
+  --font-chinese-simplified: sans-serif;
+  --font-chinese-traditional: sans-serif;
 }
 
 /**
  * @name Catppuccin
  * @author Catppuccin
  * @version 0.0.5
- * @description 🎮 Soothing pastel theme for Discord
+ * @description Soothing pastel theme for Discord
  * @website https://github.com/catppuccin
  * @source https://github.com/catppuccin/discord
  **/
@@ -253,24 +259,3 @@
 	color: var(--white) !important;
 	background: var(--black4) !important;
 }
-
-/**
-* Uncomment to change the home button to a GIF of a cat popping
-div[aria-label = "Home"] > div:hover {
-	background-image: url("https://raw.githubusercontent.com/catppuccin/discord/master/assets/popcat.gif");
-	background-blend-mode: normal;
-	background-size: contain;
-}
-
-div[aria-label = "Home"] > div:hover > svg {
-	transition: opacity 1s ease-in-out;
-	opacity: 0;
-}
-
-div[aria-label = "Home"] > div > svg {
-	color: white;
-	stroke: black;
-	stroke-width: 0.3px;
-}
-**/
-
