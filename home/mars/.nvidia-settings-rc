@@ -1,0 +1,16 @@
+#
+# /home/mars/.nvidia-settings-rc
+#
+# Configuration file for nvidia-settings - the NVIDIA Settings utility
+#
+
+# ConfigProperties:
+
+ShowQuitDialog = No
+
+# Attributes:
+
+0/SyncToVBlank=0
+0/AllowFlipping=0
+0/OpenGLImageSettings=3
+0/AllowGSYNC=1
