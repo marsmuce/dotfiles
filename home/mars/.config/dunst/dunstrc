@@ -46,8 +46,8 @@
     show_indicators = no
 
     icon_position = right
-    min_icon_size = 32
-    max_icon_size = 32
+    min_icon_size = 8
+    max_icon_size = 64
 
     history_length = 0
 
