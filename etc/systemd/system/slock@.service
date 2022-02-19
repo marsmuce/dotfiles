@@ -1,6 +1,7 @@
 [Unit]
 Description=Lock X session using slock for user %i
 Before=sleep.target
+Before=suspend.target
 
 [Service]
 User=%i
@@ -10,3 +11,4 @@ ExecStart=/usr/local/bin/slock
 
 [Install]
 WantedBy=sleep.target
+WantedBy=suspend.target
