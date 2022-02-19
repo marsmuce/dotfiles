@@ -35,7 +35,7 @@ fi
 exec xsetroot -cursor_name left_ptr &
 exec hsetroot -cover $HOME/Pictures/Wallpapers/Horsehead.jpg &
 exec nvidia-settings --load-config-only &
-exec picom &
+exec picom --experimental-backends &
 exec lxpolkit &
 exec dunst &
 exec redshift &

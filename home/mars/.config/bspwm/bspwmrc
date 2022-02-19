@@ -34,4 +34,4 @@ bspc config window_gap 8
 ## Node Settings
 
 # Window border width.
-bspc config border_width 2 
+bspc config border_width 0 
