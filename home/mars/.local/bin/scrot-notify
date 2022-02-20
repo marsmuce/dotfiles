@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+tag="scrot"
+
+scrot $@ -e 'xclip -selection clipboard -t image/png -i $f' $HOME/Pictures/Screenshots/%Y-%m-%d-%H%M%S.png
+
+dunstify -u l -h string:x-dunst-stack-tag:$tag \
+  "Screenshot" "Saved and copied!"

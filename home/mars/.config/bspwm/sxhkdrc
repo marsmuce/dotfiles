@@ -4,7 +4,7 @@ super + Return
 
 # program launcher
 super + space
-	dmenu_run
+dmenu_run
 
 # restart bspwm and make sxhkd reload its configuration files
 ctrl + alt + Delete
@@ -43,8 +43,4 @@ super + {_,shift + }{1-9,0}
   
 # take a screenshot
 {_,super} + Print
-  scrot {-z,-z -s -f} $HOME/Pictures/Screenshots/%Y-%m-%d-%H%M%S.png
-
-# take a screenshot and copy it
-super + shift + Print
-  scrot -s -f -o "/tmp/image.png" && xclip -selection clipboard -t image/png -i /tmp/image.png
+  scrot-notify {-z,-z -s -f} 
