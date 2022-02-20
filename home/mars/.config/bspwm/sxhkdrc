@@ -4,7 +4,7 @@ super + Return
 
 # program launcher
 super + space
-dmenu_run
+  dmenu_run
 
 # restart bspwm and make sxhkd reload its configuration files
 ctrl + alt + Delete
