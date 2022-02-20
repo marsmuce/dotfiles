@@ -2,9 +2,17 @@
 super + Return
 	st
 
-# program launcher
+# web browser
+super + shift + Return
+  firefox
+
+# program launcher and date
 super + space
   dmenu_run
+
+# date
+super + shift + space
+  dunstify "$(date)"
 
 # restart bspwm and make sxhkd reload its configuration files
 ctrl + alt + Delete
