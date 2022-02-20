@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+tag="playerctl-notify"
+
+playerctl $@ && sleep 0.1
+
+playing=$(playerctl status)
+player=$(playerctl metadata --format '{{playerName}}')
+artist=$(playerctl metadata artist)
+album=$(playerctl metadata album)
+title=$(playerctl metadata title)
+thumb=$(playerctl metadata --format '{{lc(mpris:artUrl)}}')
+
+convert "$thumb" -flatten -thumbnail 256x256 $HOME/.cache/thumb
+
+if ! [[ "$playing" == Stopped ]] && [[ "$player" == spotify ]]; then  
+  dunstify -u l -h string:x-dunst-stack-tag:$tag -i $HOME/.cache/thumb \
+    "$playing $title" "$artist - $album"
+fi
