@@ -39,4 +39,5 @@ exec picom --experimental-backends &
 exec lxpolkit &
 exec dunst &
 exec redshift &
+exec playerctld daemon &
 exec bspwm

@@ -38,6 +38,9 @@ super + {_,shift + }{1-9,0}
 {XF86AudioMute,XF86AudioLowerVolume,XF86AudioRaiseVolume}
   pamixer-notify {-t,-d 5, -i 5}
 
+{XF86AudioPrev,XF86AudioPlay,XF86AudioNext}
+  playerctl --player=spotify,firefox,discord,%any {previous,play-pause,next}
+  
 # take a screenshot
 {_,super} + Print
   scrot {-z,-z -s -f} $HOME/Pictures/Screenshots/%Y-%m-%d-%H%M%S.png
