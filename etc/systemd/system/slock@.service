@@ -5,9 +5,11 @@ Before=suspend.target
 
 [Service]
 User=%i
+Type=simple
 Environment=DISPLAY=:0
 ExecStartPre=/usr/bin/xset dpms force suspend
 ExecStart=/usr/local/bin/slock
+TimeoutSec=infinity
 
 [Install]
 WantedBy=sleep.target
